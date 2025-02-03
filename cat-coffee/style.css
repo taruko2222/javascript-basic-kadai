@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* PC,スマホ共通スタイル */
+* {
+    box-sizing: border-box;
+}
+
+/* body要素の幅が1080pxを超える場合、marginの左右をautoにして中央寄せ */
+body {
+    max-width: 1080px;
+    margin: 0 auto 0 auto;
+    font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+    font-size: 15px;
+}
+/* ヘッダー要素のレイアウト */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+/* nav要素のレイアウト */
+#nav-pc {
+    text-align: right;
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+#nav-pc ul {
+    display: flex;
+    padding-left: 0;
+}
+
+#nav-pc li {
+    margin-left: 20px;
+    list-style: none;
+}
+
+/* a要素のリンクの下線非表示 */
+#nav-pc a {
+    text-decoration: none;
+    color: #04414A;
+}
+/* a要素のリンクがホバー状態（マウスのカーソルが重なった状態）のときのみ下線表示 */
+#nav-pc a:hover {
+    text-decoration: underline;
+}
+/* メインビジュアルのメッセージと画像を絶対位置にする＆高さを400pxにする */
+#main-visual {
+    position: relative;
+    height: 400px;
+}
+#main-massage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #04414A;
+    color: #ffffff;
+    border-radius: 0 0 150px 0;
+    height: 100%;
+    width: 100%;
+    max-width: 620px;
+    z-index: 11;
+}
+/* メッセージのフォント */
+#main-massage > h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 110px 0 0 45px;
+}
+#main-massage > p {
+    font-size: 28px;
+    margin: 0 0 0 50px;
+}
+/* 画像の装飾 */
+#main-visual > img {
+    max-width: 600px;
+    /* 親要素を基準にした絶対位置で配置する */
+    position: absolute; 
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+/* 見出し */
+h2 {
+    margin: 40px 0 0 0;
+}
+h2::after {
+    content: url("images/line.png");
+    margin-left: 10px;
+}
+h3 {
+    font-size: 27px;
+}
+/* section要素 */
+#concept {
+    margin: 80px auto 0 auto;
+    padding: 10px 40px 0px 40px;
+}
+/* div要素 */
+#concept-flex {
+    display: flex;
+    text-align: center; 
+}
+#concept-flex > div {
+    width: 50%;
+    margin: 20px;
+}
+.concept-photo {
+    width: 80%;
+}
+/* section要素 */
+#product {
+    background-color: #fafafa;
+    margin: 20px 0 80px 0;
+    padding: 10px 40px 0 40px;
+}
+
+#product > div {
+    margin-top: 40px;
+    display: flex;
+}
+
+#product-left {
+    /*width: 50%; 2025.2.3 こちらを適用すると左に寄ってしまう*/  
+    margin-right: 20px;
+}
+
+#product-right {
+    /*width: 50%;　2025.2.3 こちらを適用すると左に寄ってしまう*/
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+#product-left > div {
+    position: relative;
+    height: 480px;
+    margin-right: 20px;
+}
+
+#product-right > div {
+    position: relative;
+    height: 480px;
+    margin-left: 20px;
+}
+
+/* 画像 */
+.product-photo {
+    width: 100%;
+}
+
+/* 見出しと説明文 */
+.product-explain {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    margin: 0 40px 0 40px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 英語の見出し */
+.product-explain > span {
+    color: #04414A;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 見出し */
+.product-explain > h3 {
+    margin: 5px 0 5px 0;
+}
+
+/* 説明文 */
+.product-explain > p {
+    margin: 0;
+}
+
+/* section要素 */
+#company {
+    margin: 80px auto 80px auto;
+    padding: 10px 40px 0px 40px; /* 2025.1.29追記 */
+}
+
+#company-table {
+    width: 100%;
+}
+
+.tableheader {
+    text-align: left;
+    padding: 20px;
+    border-bottom-color: #04414A;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    width: 100px;
+}
+
+.tableheader-first {
+    border-top-color: #04414A;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+   
+ .cell {
+    padding: 30px;
+    border-bottom-color: #ececec;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+ }
+
+ .cell-first {
+    border-top-color: #ececec;
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+
+  /* フッター */
+  footer {
+    background-color: #04414A;
+    text-align: center;
+    padding: 80px 80px 30px 80px;
+  }
+
+  #footer-logo {
+    margin-bottom: 30px;
+  }
+  
+ #footer-link {
+    margin-bottom: 50px;
+  }
+  
+  #footer-link > a {
+    text-decoration: none;
+    margin: 10px;
+    color: #ffffff;
+  }
+  
+  #footer-link > a:hover {
+    text-decoration: underline;
+  }
+
+  #sns-footer {
+    text-align: left;
+    width: 100%;
+   }
+   
+   #sns-footer > a {
+    margin-right: 30px;
+   }
+   
+   #copyright {
+    color: #ffffff;
+    float: right;
+   }
